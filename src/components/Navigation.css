@@ -1,0 +1,74 @@
+/* Navigation.css */
+
+/* Navbar overall style */
+.navbar {
+  background: linear-gradient(90deg, #0a0f1c, #161b22); /* deep dark gradient */
+  padding: 0.75rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Brand styling */
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #0dcaf0 !important; /* Bootstrap cyan */
+  text-shadow: 0 0 8px rgba(13, 202, 240, 0.7);
+}
+
+/* Nav links */
+.nav-link {
+  font-size: 1.05rem;
+  margin-left: 1.25rem;
+  color: #e5e7eb !important; /* lighter gray */
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #0dcaf0 !important;
+}
+
+/* Active link highlight with underline effect */
+.nav-link.active {
+  color: #0dcaf0 !important;
+  font-weight: 600;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #0dcaf0;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  border-radius: 4px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Toggle button (hamburger) */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* white color */
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
