@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-
+import './Contact.css';
 const Contact = () => {
   return (
     <section id="contact" className="py-5">
