@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-
+import './Project.css';
 const Projects = () => {
   return (
     <section id="projects" className="py-5 bg-light">
