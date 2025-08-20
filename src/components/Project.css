@@ -1,111 +1,112 @@
 /* =========================
    Projects Section
 ========================= */
-#projects {
-  background: #f8fafc; /* very light clean background */
-  padding: 80px 0;
+section#projects {
+  background: linear-gradient(135deg, #1f1c2c, #928dab) !important;
+  padding: 80px 0 !important;
 }
 
 /* Section Title */
-#projects h2 {
-  font-size: 2.5rem;
+section#projects h2 {
+  font-size: 2.5rem !important;
   font-weight: 700;
   text-align: center;
   margin-bottom: 60px;
-  color: #1e293b; /* deep slate */
+  color: #ffffff !important; /* white text to pop on dark gradient */
   letter-spacing: 1px;
   position: relative;
 }
 
-#projects h2::after {
+section#projects h2::after {
   content: "";
   display: block;
   width: 70px;
   height: 4px;
-  background: #0d6efd; /* primary blue accent */
+  background: #ffd369; /* gold accent instead of blue for contrast */
   margin: 15px auto 0;
   border-radius: 2px;
 }
 
 /* Project Cards */
-#projects .card {
-  border: none;
-  border-radius: 16px;
+section#projects .card {
+  border: none !important;
+  border-radius: 16px !important;
   overflow: hidden;
-  background: #ffffff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: all 0.35s ease;
+  background: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.35s ease !important;
 }
 
-#projects .card:hover {
+section#projects .card:hover {
   transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25) !important;
 }
 
 /* Card Image */
-#projects .card-img-top {
-  height: 230px;
+section#projects .card-img-top {
+  height: 230px !important;
   object-fit: cover;
   border-bottom: 1px solid #e5e7eb;
   transition: transform 0.4s ease;
 }
 
-#projects .card:hover .card-img-top {
+section#projects .card:hover .card-img-top {
   transform: scale(1.05);
 }
 
 /* Card Content */
-#projects .card-body {
-  padding: 25px 20px;
+section#projects .card-body {
+  padding: 25px 20px !important;
   text-align: center;
 }
 
-#projects .card-title {
-  font-size: 1.4rem;
-  font-weight: 600;
+section#projects .card-title {
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
   margin-bottom: 12px;
-  color: #1e293b;
+  color: #1f1c2c !important; /* dark text inside cards */
 }
 
-#projects .card-text {
+section#projects .card-text {
   font-size: 1rem;
-  color: #475569;
+  color: #555d66 !important;
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
-/* Project Links/Buttons */
-#projects .btn {
-  background: #0d6efd;
-  color: #fff;
-  font-weight: 500;
+/* Buttons */
+section#projects .btn {
+  background: #ffd369 !important; /* gold button for harmony */
+  color: #1f1c2c !important;
+  font-weight: 600 !important;
   padding: 8px 20px;
   border-radius: 30px;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-#projects .btn:hover {
-  background: #0b5ed7;
+section#projects .btn:hover {
+  background: #f7c948 !important;
+  color: #000 !important;
 }
 
 /* Responsive */
 @media (max-width: 992px) {
-  #projects h2 {
-    font-size: 2.2rem;
+  section#projects h2 {
+    font-size: 2.2rem !important;
   }
-  #projects .card-img-top {
-    height: 200px;
+  section#projects .card-img-top {
+    height: 200px !important;
   }
 }
 
 @media (max-width: 576px) {
-  #projects {
-    padding: 60px 0;
+  section#projects {
+    padding: 60px 0 !important;
   }
-  #projects h2 {
-    font-size: 1.8rem;
+  section#projects h2 {
+    font-size: 1.8rem !important;
   }
-  #projects .card-body {
-    padding: 20px 15px;
+  section#projects .card-body {
+    padding: 20px 15px !important;
   }
 }
