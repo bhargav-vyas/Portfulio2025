@@ -25,7 +25,6 @@ section#projects h2::after {
   border-radius: 2px;
 }
 
-/* Project Cards */
 section#projects .card {
   position: relative;
   border: none !important;
@@ -44,7 +43,6 @@ section#projects .card:hover {
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Glow Effect */
 section#projects .card::before {
   content: "";
   position: absolute;
@@ -63,7 +61,7 @@ section#projects .card:hover::before {
   opacity: 1;
 }
 
-/* Floating Keyframes */
+
 @keyframes floatCard {
   0%, 100% {
     transform: translateY(0px) rotateY(0deg) rotateX(0deg);
@@ -73,7 +71,7 @@ section#projects .card:hover::before {
   }
 }
 
-/* Card Image */
+
 section#projects .card-img-top {
   height: 230px !important;
   object-fit: cover;
@@ -85,7 +83,6 @@ section#projects .card:hover .card-img-top {
   transform: scale(1.08) rotateZ(1deg);
 }
 
-/* Card Content */
 section#projects .card-body {
   padding: 25px 20px !important;
   text-align: center;
@@ -108,7 +105,6 @@ section#projects .card-text {
   margin-bottom: 15px;
 }
 
-/* Buttons */
 section#projects .btn {
   background: #ffd369 !important;
   color: #1f1c2c !important;
@@ -123,7 +119,6 @@ section#projects .btn:hover {
   color: #000 !important;
 }
 
-/* Responsive */
 @media (max-width: 992px) {
   section#projects h2 {
     font-size: 2.2rem !important;
