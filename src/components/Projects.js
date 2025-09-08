@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "./Project.css";
 
@@ -28,67 +28,28 @@ const projectData = [
     img: "https://via.placeholder.com/400x250",
     link: "#",
   },
-  {
-    title: "Project Five",
-    description: "This is a short description of my fifth project.",
-    img: "https://via.placeholder.com/400x250",
-    link: "#",
-  },
 ];
 
 const Projects = () => {
-  useEffect(() => {
-    const cards = document.querySelectorAll(".project-card");
-
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.85;
-
-      cards.forEach((card, index) => {
-        const cardTop = card.getBoundingClientRect().top;
-
-        if (window.innerWidth > 768) {
-          if (cardTop < triggerBottom) {
-            setTimeout(() => {
-              card.classList.add("show");
-            }, index * 200);
-          }
-        } else {
-          card.classList.add("show");
-        }
-      });
-    };
-
-    window.addEventListener("scroll", revealOnScroll);
-    window.addEventListener("load", revealOnScroll);
-
-    return () => {
-      window.removeEventListener("scroll", revealOnScroll);
-      window.removeEventListener("load", revealOnScroll);
-    };
-  }, []);
-
   return (
-    <section
-      id="projects"
-      className="h-screen overflow-y-scroll snap-y snap-mandatory"
-    >
-      <Container fluid>
-        <h2>My Projects</h2>
-        <Row className="g-4">
+    <section id="projects" className="projects-section">
+      <Container>
+        <h2 className="text-center mb-5">🚀 My Projects</h2>
+        <Row>
           {projectData.map((project, index) => (
-            <Col
-              md={12}
-              key={index}
-              className="h-screen flex items-center justify-center snap-center"
-            >
-              <Card className="project-card">
-                <Card.Img variant="top" src={project.img} />
+            <Col md={6} lg={4} key={index} className="mb-4">
+              <Card className="project-card shadow-lg">
+                <div className="project-img-wrapper">
+                  <Card.Img variant="top" src={project.img} />
+                  <div className="overlay">
+                    <Button href={project.link} target="_blank" className="view-btn">
+                      View More
+                    </Button>
+                  </div>
+                </div>
                 <Card.Body>
                   <Card.Title>{project.title}</Card.Title>
                   <Card.Text>{project.description}</Card.Text>
-                  <Button href={project.link} target="_blank">
-                    View More
-                  </Button>
                 </Card.Body>
               </Card>
             </Col>
