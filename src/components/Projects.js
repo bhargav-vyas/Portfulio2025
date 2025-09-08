@@ -4,29 +4,35 @@ import "./Project.css";
 
 const projectData = [
   {
-    title: "Project One",
-    description: "This is a short description of my first project.",
-    img: "https://via.placeholder.com/400x250",
+    title: "Library Management System",
+    description:
+      "The Library Management System – Microservices is an ongoing project built with Spring Boot, using Eureka Server and Feign Client. It includes modules for book catalog, users, and inventory, ensuring scalability and modularity. Available on GitHub.",
+    img: "https://via.placeholder.com/400x250?text=Library+Management+System",
+    link: "https://github.com/bhargav-vyas/Library-Management-System-new",
   },
   {
     title: "Project Two",
     description: "This is a short description of my second project.",
     img: "https://via.placeholder.com/400x250",
+    link: "#",
   },
   {
     title: "Project Three",
     description: "This is a short description of my third project.",
     img: "https://via.placeholder.com/400x250",
+    link: "#",
   },
   {
     title: "Project Four",
     description: "This is a short description of my fourth project.",
     img: "https://via.placeholder.com/400x250",
+    link: "#",
   },
   {
     title: "Project Five",
     description: "This is a short description of my fifth project.",
     img: "https://via.placeholder.com/400x250",
+    link: "#",
   },
 ];
 
@@ -41,14 +47,12 @@ const Projects = () => {
         const cardTop = card.getBoundingClientRect().top;
 
         if (window.innerWidth > 768) {
-          // Desktop only
           if (cardTop < triggerBottom) {
             setTimeout(() => {
               card.classList.add("show");
             }, index * 200);
           }
         } else {
-          // Mobile: show instantly
           card.classList.add("show");
         }
       });
@@ -64,7 +68,10 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="h-screen overflow-y-scroll snap-y snap-mandatory">
+    <section
+      id="projects"
+      className="h-screen overflow-y-scroll snap-y snap-mandatory"
+    >
       <Container fluid>
         <h2>My Projects</h2>
         <Row className="g-4">
@@ -79,7 +86,9 @@ const Projects = () => {
                 <Card.Body>
                   <Card.Title>{project.title}</Card.Title>
                   <Card.Text>{project.description}</Card.Text>
-                  <Button href="#">View More</Button>
+                  <Button href={project.link} target="_blank">
+                    View More
+                  </Button>
                 </Card.Body>
               </Card>
             </Col>
