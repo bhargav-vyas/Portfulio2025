@@ -13,41 +13,79 @@
   transition: transform 0.3s ease;
   background: #1f1b2e;
   color: #dcdcdc;
+  padding: 25px;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 
-.project-img-wrapper {
+/* === GitHub Actions Style Pipeline === */
+.pipeline-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0;
   position: relative;
 }
 
-.project-img-wrapper img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
+.pipeline-step {
+  text-align: center;
+  flex: 1;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 198, 255, 0.7);
-  display: flex;
+.pipeline-step .circle {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  border-radius: 50%;
+  background: #243b55;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid #00c6ff;
+  box-shadow: 0 0 12px #00c6ff;
 }
 
-.project-img-wrapper:hover .overlay {
-  opacity: 1;
+.pipeline-step p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #dcdcdc;
+}
+
+.pipeline-line {
+  flex: 1;
+  height: 4px;
+  background: #00c6ff33;
+  position: relative;
+  margin: 0 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Moving dot through pipeline */
+.flow-dot {
+  width: 14px;
+  height: 14px;
+  background: #00c6ff;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: -20px;
+  animation: flowMove 3s infinite linear;
+}
+
+@keyframes flowMove {
+  0% { left: -20px; opacity: 0; }
+  10% { opacity: 1; }
+  50% { left: 50%; opacity: 1; }
+  100% { left: 100%; opacity: 0; }
 }
 
 .view-btn {
+  margin-top: 15px;
   background: #243b55;
   border: none;
   padding: 10px 20px;
@@ -60,9 +98,75 @@
   background: #00c6ff;
 }
 
-/* Gradient background animation */
+/* Background gradient animation */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+/* === GitHub Actions Style Pipeline with API/Response === */
+.pipeline-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.pipeline-step {
+  text-align: center;
+  flex: 1;
+  min-width: 100px;
+}
+
+.pipeline-step .circle {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #243b55;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid #00c6ff;
+  box-shadow: 0 0 12px #00c6ff;
+}
+
+.pipeline-step p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #dcdcdc;
+}
+
+.pipeline-line {
+  flex: 1;
+  height: 4px;
+  background: #00c6ff33;
+  position: relative;
+  margin: 0 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Moving dot through pipeline */
+.flow-dot {
+  width: 14px;
+  height: 14px;
+  background: #00c6ff;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: -20px;
+  animation: flowMove 6s infinite linear;
+}
+
+@keyframes flowMove {
+  0%   { left: -20px; opacity: 0; }
+  5%   { opacity: 1; }
+  50%  { left: 50%; opacity: 1; }
+  95%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
 }
