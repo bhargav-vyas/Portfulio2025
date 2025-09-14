@@ -7,11 +7,28 @@ const HeroSection = () => {
 
   useEffect(() => {
     let index = 0;
+    let typing = true;
+
     const interval = setInterval(() => {
-      setText(fullText.slice(0, index));
-      index++;
-      if (index > fullText.length) clearInterval(interval);
-    }, 50);
+      if (typing) {
+        setText(fullText.slice(0, index));
+        index++;
+        if (index > fullText.length) {
+          typing = false;
+          setTimeout(() => {
+            typing = false;
+          }, 1500); // pause after finishing
+        }
+      } else {
+        setText(fullText.slice(0, index));
+        index--;
+        if (index < 0) {
+          typing = true;
+          index = 0;
+        }
+      }
+    }, typing ? 150 : 100); // slower typing (150ms), slightly faster backspace (100ms)
+
     return () => clearInterval(interval);
   }, []);
 

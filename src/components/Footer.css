@@ -1,15 +1,17 @@
 .custom-footer {
   background: linear-gradient(135deg, #141e30, #243b55);
   color: #ffffff;
-  font-size: 2rem;
   text-align: center;
+  font-size: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-/* Top text (My Portfolio) */
+/* Top text */
 .footer-center-top p {
-  margin: 0 0 20px 0;
-  font-size: 1.2rem;
-  font-weight: 600;
+  margin: 0 0 15px 0;
+  font-size: 1rem;
+  font-weight: 500;
   color: #ffffff;
 }
 
@@ -22,23 +24,19 @@
   color: #1da1f2;
 }
 
-/* Bottom row */
+/* Row */
 .footer-row {
   display: flex;
-  justify-content: center; /* left group and right group */
+  justify-content: center;
   align-items: center;
-  gap: 50rem;
-  flex-wrap: wrap;
 }
 
-/* Left and Right link groups */
-.footer-left,
-.footer-right {
+/* Unified Links */
+.footer-links {
   display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
 }
 
 /* Links */
@@ -47,13 +45,13 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1.1rem; /* increased font size */
+  gap: 6px;
+  font-size: 1rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .custom-footer a svg {
-  font-size: 1.4rem; /* bigger icons */
+  font-size: 1.2rem;
 }
 
 .custom-footer a:hover {
@@ -61,8 +59,8 @@
 }
 
 /* Hover colors */
-.footer-left a:nth-child(1):hover { color: #0077b5; } /* LinkedIn */
-.footer-left a:nth-child(2):hover { color: #1da1f2; } /* Twitter */
-.footer-right a:nth-child(1):hover { color: #e1306c; } /* Instagram */
-.footer-right a:nth-child(2):hover { color: #f5f5f5; } /* GitHub */
-.footer-right a:nth-child(3):hover { color: #ff9800; } /* Contact */
+.footer-links a:nth-child(1):hover { color: #0077b5; } /* LinkedIn */
+.footer-links a:nth-child(2):hover { color: #1da1f2; } /* Twitter */
+.footer-links a:nth-child(3):hover { color: #e1306c; } /* Instagram */
+.footer-links a:nth-child(4):hover { color: #f5f5f5; } /* GitHub */
+.footer-links a:nth-child(5):hover { color: #ff9800; } /* Contact */

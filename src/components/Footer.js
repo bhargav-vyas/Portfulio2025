@@ -8,11 +8,11 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import "./Footer.css";
+
 const Footer = () => {
   return (
     <footer className="custom-footer text-white py-4">
       <Container>
-
         {/* Top: Portfolio Text */}
         <div className="footer-center-top">
           <p>
@@ -20,20 +20,15 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Bottom: Links Left + Right */}
+        {/* Bottom: Links Row */}
         <div className="footer-row">
-          {/* Left side */}
-          <div className="footer-left">
+          <div className="footer-links">
             <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
               <FaLinkedin /> LinkedIn
             </a>
             <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
               <FaTwitter /> Twitter
             </a>
-          </div>
-
-          {/* Right side */}
-          <div className="footer-right">
             <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
               <FaInstagram /> Instagram
             </a>
@@ -45,7 +40,6 @@ const Footer = () => {
             </a>
           </div>
         </div>
-
       </Container>
     </footer>
   );

@@ -1,0 +1,136 @@
+.skills {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #141e30, #243b55); /* Same as contact */
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative glowing orb */
+.skills::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0,198,255,0.25) 0%, transparent 70%);
+  top: -200px;
+  right: -200px;
+  animation: float 10s infinite alternate ease-in-out;
+  z-index: 0;
+  filter: blur(30px);
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #00d9ff;
+  text-shadow: 0 0 12px rgba(0, 217, 255, 0.6);
+  animation: glowPulse 2s infinite alternate;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Skill Card */
+.skill-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 217, 255, 0.6);
+  animation: pulse 1.8s infinite ease-in-out;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease-out;
+}
+
+/* Skill Text */
+.skill-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #00d9ff;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  opacity: 0.85;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #00d9ff, #00ffa2);
+  border-radius: 8px;
+  width: 0;
+}
+
+/* Progress Fill Animation */
+.fill {
+  animation: fillProgress 2s ease forwards;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--target-width);
+  }
+}
+
+/* Glow Pulse on Hover */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 217, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+  }
+}
+
+/* Floating orb animation */
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-25px) translateX(-20px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+/* Glow pulse animation */
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 10px rgba(0,198,255,0.8), 0 0 20px rgba(0,198,255,0.5); }
+  100% { text-shadow: 0 0 25px rgba(0,198,255,1), 0 0 45px rgba(0,198,255,0.8); }
+}
