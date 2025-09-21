@@ -3,7 +3,8 @@ import "./Home.css";
 
 const HeroSection = () => {
   const [text, setText] = useState("");
-  const fullText = "Full-Stack Developer | Backend & Software Engineering";
+  const fullText =
+    "Full-Stack Developer | Java & Spring Boot | Backend Engineering Specialist";
 
   useEffect(() => {
     let index = 0;
@@ -17,7 +18,7 @@ const HeroSection = () => {
           typing = false;
           setTimeout(() => {
             typing = false;
-          }, 1500); // pause after finishing
+          }, 1500);
         }
       } else {
         setText(fullText.slice(0, index));
@@ -27,7 +28,7 @@ const HeroSection = () => {
           index = 0;
         }
       }
-    }, typing ? 150 : 100); // slower typing (150ms), slightly faster backspace (100ms)
+    }, typing ? 150 : 100);
 
     return () => clearInterval(interval);
   }, []);
@@ -44,8 +45,18 @@ const HeroSection = () => {
           Hi, I'm <span>Bhargav Vyas</span>
         </h1>
         <h2 className="typing">{text}</h2>
-        <p>Exploring innovation in technology and coding every day 🚀</p>
-        <button className="glow-button">Explore My Work</button>
+        <p>
+          Passionate about building scalable enterprise applications with Java,
+          Spring Boot, Hibernate, and modern web technologies. Dedicated to
+          delivering high-performance backend solutions that power innovative
+          digital experiences 🚀
+        </p>
+        <button
+          className="glow-button"
+          onClick={() => window.open("https://github.com/bhargav-vyas", "_blank")}
+        >
+          Explore My Work
+        </button>
       </div>
     </section>
   );
