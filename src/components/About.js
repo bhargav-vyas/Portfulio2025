@@ -31,10 +31,11 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          Hello! I'm a <span>Full-Stack Developer</span> who loves bringing
-          ideas to life through clean, efficient code. Based in{" "}
-          <span>India</span>, I build scalable web apps using{" "}
-          <span>React</span>, <span>Node.js</span>, and <span>MongoDB</span>.
+          Hello! I'm a <span>Full-Stack Developer</span> with a strong focus on{" "}
+          <span>Java, Spring Boot, Hibernate, and SQL</span>. Based in{" "}
+          <span>India</span>, I specialize in building scalable enterprise
+          applications and crafting efficient backend solutions that power
+          modern digital experiences.
         </motion.p>
 
         {/* Second Paragraph */}
@@ -45,8 +46,10 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.6 }}
         >
-          When I’m not coding, I’m usually exploring new technologies, hiking,
-          or sketching digital art.
+          I’m passionate about software engineering, problem-solving, and
+          creating applications that are both performant and user-friendly. When
+          I’m not coding, I enjoy exploring new technologies and continuously
+          improving my skills.
         </motion.p>
 
         {/* Call to Action */}
@@ -54,6 +57,9 @@ const About = () => {
           className="about-btn"
           whileHover={{ scale: 1.1, boxShadow: "0px 0px 20px #00c6ff" }}
           whileTap={{ scale: 0.95 }}
+          onClick={() =>
+            window.open("https://github.com/bhargav-vyas", "_blank")
+          }
         >
           View My Work
         </motion.button>
@@ -75,4 +81,3 @@ const About = () => {
 };
 
 export default About;
-  

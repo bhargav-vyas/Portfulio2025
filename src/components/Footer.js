@@ -2,11 +2,11 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import {
   FaLinkedin,
-  FaTwitter,
   FaGithub,
   FaInstagram,
   FaEnvelope,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6"; // For the new X (Twitter) logo
 import "./Footer.css";
 
 const Footer = () => {
@@ -23,16 +23,32 @@ const Footer = () => {
         {/* Bottom: Links Row */}
         <div className="footer-row">
           <div className="footer-links">
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/bhargav-vyas-985682321/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin /> LinkedIn
             </a>
-            <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
-              <FaTwitter /> Twitter
+            <a
+              href="https://x.com/Bhargav29227044?t=7fIapmkOF_bLvrJPJUOh4Q&s=08"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaXTwitter /> X
             </a>
-            <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/bhargav_162004/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram /> Instagram
             </a>
-            <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/bhargav-vyas"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub /> GitHub
             </a>
             <a href="mailto:youremail@example.com">
