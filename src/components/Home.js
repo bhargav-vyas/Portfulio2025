@@ -53,7 +53,7 @@ const HeroSection = () => {
         </p>
         <button
           className="glow-button"
-          onClick={() => window.open("https://www.linkedin.com/in/bhargav-vyas-985682321/", "_blank")}
+          onClick={() => window.open("https://www.linkedin.com/in/bhargav-vyas-985682321/ ", "_blank")}
         >
           Explore My Network
         </button>

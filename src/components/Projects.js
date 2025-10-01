@@ -13,25 +13,25 @@ const projectData = [
     title: "E-Learning Platform",
     description:
       "An E-Learning platform built with Spring Boot and Angular, providing user authentication, course management, and interactive quizzes for better engagement.",
-    link: "https://github.com/bhargav-vyas/E-Learning-Platform",
+    link: "https://github.com/bhargav-vyas/E-Learning-Hub.git",
   },
   {
-    title: "Banking System",
+    title: "Bloging-application",
     description:
       "A core banking system project demonstrating method overloading and overriding in Java. It handles savings and current accounts with transaction operations.",
-    link: "https://github.com/bhargav-vyas/Banking-System",
+    link: "https://github.com/bhargav-vyas/Bloging-application.git",
   },
   {
-    title: "Tic Tac Toe Game",
+    title: "Referr-Easy-FrontEnd",
     description:
       "A fun React.js project implementing Tic Tac Toe with an interactive grid, winner detection, and image display for results.",
-    link: "https://github.com/bhargav-vyas/Tic-Tac-Toe-React",
+    link: "https://github.com/bhargav-vyas/referr-easy-front.git",
   },
   {
-    title: "File Upload App",
+    title: "Sky-Scheduler",
     description:
       "A React.js app with a simple file upload interface, allowing users to select and upload files with a clean and intuitive UI.",
-    link: "https://github.com/bhargav-vyas/File-Upload-App",
+    link: "https://github.com/bhargav-vyas/Sky-Scheduler.git",
   },
 ];
 
