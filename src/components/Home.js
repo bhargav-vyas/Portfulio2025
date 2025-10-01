@@ -53,9 +53,9 @@ const HeroSection = () => {
         </p>
         <button
           className="glow-button"
-          onClick={() => window.open("https://github.com/bhargav-vyas", "_blank")}
+          onClick={() => window.open("https://www.linkedin.com/in/bhargav-vyas-985682321/", "_blank")}
         >
-          Explore My Work
+          Explore My Network
         </button>
       </div>
     </section>
